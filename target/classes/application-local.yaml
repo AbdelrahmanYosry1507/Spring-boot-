@@ -1,0 +1,24 @@
+server:
+  port: '8080'
+  servlet:
+    context-path: /hr
+spring:
+  datasource:
+    username: root
+    url: jdbc:h2:file:./database/db_local
+    driverClassName: org.h2.Driver
+    password: 123
+  h2:
+    console:
+      enabled: 'true'
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+user-config:
+  profile: /user-profile
+  edit: /user-edit-page
+  support: /user-support
+users:
+  get-user-info:
+    url: https://jsonplaceholder.typicode.com/todos/
